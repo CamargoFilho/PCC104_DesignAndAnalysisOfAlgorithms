@@ -1,46 +1,49 @@
 QUESTIONS
-
+* * *
 
 1. Why we study algorithms?
-
-Answer:
-
 * * *
 
 2. What is an algorithm?
-
-Answer:
-
 * * *
 
 3. Consider the Euclids's algorithm (https://en.wikipedia.org/wiki/Euclidean_algorithm#
 Implementations) to calculate greatest common factor. How we know that it finished in infinit time?
-
-Answer:
-
 * * *
 
 4. Consider the next procudere to calculate greatest common factor:
 ---
 -> STEP 1 Find the prime factors of m.
-
 -> STEP 2 Find the prime factors of n.
-
 -> STEP 3 Identify all the common factors in the two prime expansions found in Step 1 and Step 2.
 (If p is a common factor occurring pm and pn times in m and n, respectively, it should be
 repeated min{pm, pn} times.)
-
 -> STEP 4 Compute the product of all the common factors and return it as the greatest common
 divisor of the numbers given.
 ---
 Why this procedure is not qualified with a legit algorithm?
-
-Answer:
-
 * * *
 
 5. Design, as a fluxogram, the project's analysis algorithm process and show a brief explanation about each step.
-
-Answer:
-
 * * *
+
+=======================================================================
+
+ANSWERS
+* * *
+
+1.
+* * *
+
+2.
+* * *
+
+3.
+* * *
+
+4.
+* * *
+
+5.
+* * *
+
