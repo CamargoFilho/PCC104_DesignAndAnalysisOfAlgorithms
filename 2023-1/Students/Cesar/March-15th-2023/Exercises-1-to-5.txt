@@ -43,14 +43,14 @@ ANSWERS
 [OK] 2.According (Levitin, 2012) "algorithm is a sequence of unambiguous instructions for solving a problem, i.e., for obtaining a required output for any legitimate input in a finite amount of time" and [...]"The reference to “instructions” in the definition implies that there is something or someone capable of understanding and following the instructions given. We call this a 'computer'". Before our actual computer machines, someone whos compute some operations was considered a "computer". 
 * * *
 
-3."Since the remainders are non-negative integers that decrease with every step, the sequence [ r-1 > r0 > r1 > r2 > ... >= 0]
+[OK] 3."Since the remainders are non-negative integers that decrease with every step, the sequence [ r-1 > r0 > r1 > r2 > ... >= 0]
 cannot be infinite, so the algorithm must eventually fail to produce the next step; but the division algorithm can always proceed to the (N+1)th step provided rN > 0. Thus the algorithm must eventually produce a zero remainder rN = 0. The final nonzero remainder is the greatest common divisor of a and b: rN-1 = gcd(a,b)"
 * * *
 
-4."Because the prime factorization steps are not defined unambiguously: they require a list of prime numbers, and I strongly suspect that your middle-school math teacher did not explain how to obtain such a list[...]  Unless this issue is resolved, we cannot, say, write a program implementing this procedure" (Levitin, 2012)
+[OK] 4."Because the prime factorization steps are not defined unambiguously: they require a list of prime numbers, and I strongly suspect that your middle-school math teacher did not explain how to obtain such a list[...]  Unless this issue is resolved, we cannot, say, write a program implementing this procedure" (Levitin, 2012)
 * * *
 
-5. <see at the book>
+[OK] 5. <see at the book Figure 1.2, p.38>
 #1 Understand the problem
 #2 Decide on: computational means, exact vs. approximate solving, algorith design technique
 #3 Design an algorithm
