@@ -1,35 +1,66 @@
-#include <iostream>
-#include <vector>
+/*
+    Método de Ordenação de Dados - Selection Sort
+*/
 
-void selectionSort(std::vector<int> &arr) {
-    // step 1: loop from the beginning of the array to the second to last item
-    for (int currentIndex = 0; currentIndex < arr.size() - 1; currentIndex++) {
-        // step 2: save a copy of the currentIndex
-        int minIndex = currentIndex;
-        // step 3: loop through all indexes that proceed the currentIndex
-        for (int i = currentIndex + 1; i < arr.size(); i++) {
-          /* step 4:  if the value of the index of the current loop is less
-                      than the value of the item at minIndex, update minIndex
-                      with the new lowest value index */
-            if (arr[i] < arr[minIndex]) {
-                // update minIndex with the new lowest value index
-                minIndex = i;
-            }
-        }
-        // step 5: if minIndex has been updated, swap the values at minIndex and currentIndex
-        if (minIndex != currentIndex) {
-            int temp = arr[currentIndex];
-            arr[currentIndex] = arr[minIndex];
-            arr[minIndex] = temp;
-        }
+// Declaração das Bibliotecas;
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define TAM 50 // Define o tamanho do vetor;
+
+void fSelect_Sort(int *pVetor); // Declara a função select sort;
+
+int main()
+{
+    int vVetor[TAM]; // Declara o vetor
+    int vAux;
+
+    srand ( time(NULL) );
+    for (vAux=0; vAux < TAM; vAux++)
+    {
+        vVetor[vAux] = (rand() % 89) + 10; // Preenche o vetor aleatóriamente;
+        printf(" %d,",vVetor[vAux]);
     }
+
+    fSelect_Sort(vVetor); // Chama a função de Ordenação;
+
+    printf("\n\n");
+
+    for (vAux=0; vAux < TAM; vAux++)
+    {
+        printf(" %d,",vVetor[vAux]);
+    }
+
+    printf("\n\n ");
+    system("pause");
+    return 0;
 }
 
-int main() {
-    std::vector<int> arr = {12, 11, 15, 10, 9, 1, 2, 3, 13, 14, 4, 5, 6, 7, 8};
-    selectionSort(arr);
-    for (int i; i < arr.size(); i++) {
-        std::cout << arr[i];
-        if (i < arr.size() - 1) std::cout << ", ";
+void fSelect_Sort(int *pVetor)
+{
+    int vMenor;
+    int vAux;
+    int vTemp;
+    int vTroca;
+
+    for(vAux=0; vAux < TAM-1; vAux++) // Percorre todo o vetor até TAM-1, pois a ultima posição não precisa testar pois ja estara ordenada;
+    {
+        vMenor = vAux; // Menor valor recebe a posição que está passando;
+
+        for (vTemp=vAux+1; vTemp < TAM; vTemp++) // Percorre o vetor da posição vAux+1 até o final;
+        {
+            if (pVetor[vTemp] < pVetor[vMenor]) // Testa se a posição que está passando é menor que o menor valor;
+            {
+                vMenor = vTemp; // vMenor recebe a posição do menor valor;
+            }
+        }
+
+        if (vMenor != vAux) // Se a posição for diferente da que está passando, ocorre a troca;
+        {
+            vTroca = pVetor[vAux];
+            pVetor[vAux]   = pVetor[vMenor];
+            pVetor[vMenor] = vTroca;
+        }
     }
 }
