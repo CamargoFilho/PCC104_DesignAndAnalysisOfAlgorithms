@@ -5,7 +5,7 @@
 
 
 K = 55 #Chave que desejo encontrar
-m = 12 #tamanho do Array
+m = 13 #tamanho do Array
 A = [3, 14, 27, 31, 39, 42, 55, 70, 74, 81, 85, 93, 98] #Array
 l = A[m] #último valor do Array
 r = A[m-1] #penúltimo valor do Array
