@@ -44,15 +44,15 @@ DivideConquer();
 
 
 # Expressão Matemática 
-# -> Somatório de 1 até n-1 de (n/2)+1
+# -> T (n) = aT (n/b) + f (n)
 
 #Cálculo da função de custo
-# -> f(n) = (n/2)+1
+# -> A(n) = 2A(n/2) + 1
 
 
 #Classe de eficiência
-# -> Pior caso = Não existe a chave buscada no array = O(n) -> Definição: implica que a ordem de gradenza neste caso tende zero
-# -> Melhor caso = A chave buscada existe no array = O(1) -> Definição: implica que a ordem de grandeza neste caso é constante
-# -> Caso médio = A chave pode ou não ser encontrada no array = O(log n) -> Definição: implica que a ordem de grandeza neste caso tende ao infinito 
+# -> Pior caso = Todos os valores comparados são iguais, não há número maior = O(n)
+# -> Melhor caso = Encontrar o maior valor comparado nas duas listas simultaneamente = O(1)
+# -> Caso médio = Encontrar o maior valor comparado em uma lista e não em outra lista = O(log n)
 
     
