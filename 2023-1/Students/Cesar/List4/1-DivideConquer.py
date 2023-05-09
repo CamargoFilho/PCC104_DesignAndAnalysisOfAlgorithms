@@ -5,42 +5,33 @@ A1 = [];
 A2 = [];
 i = 1;
 tam = len(A);
-div = int(tam/2);
-j = div;
+print("tam",tam)
+if tam % 2 != 0:
+    div = int(tam/2)+1;
+else:
+    div = int(tam/2);
+print("div = ",div)
+j = int(div);
+print("j = ",j)
 k = 1;
+BigNum1 = 1;
+BigNum2 = 2;
 
 def DivideConquer():
-    for i in range(div):
-        A1.append(A[i])
-        
+    for i in range(tam):
+        if i < div:
+            A1.append(A[i])
+        else:
+            A2.append(A[i])
+    print("A1 = ", A1)
+    print("A2 = ", A2)
 
-    for j in range(tam):
-        A2.append(A[j])
-        
+
     
-    for i in range(div):
-        k = div-1
-        if A1[i] < A1[k]:
-            BigNum1 = A1[k]
-        else:
-            if k < div:
-                continue
-            else:
-                exit
-
-    for j in range(tam):
-        m = tam-1  
-        if A2[j] < A2[m]:
-            BigNum2 = A1[k]
-        else:
-            if m < tam:
-               continue 
-            else:
-                exit
-
 
     if BigNum1 < BigNum2:
-        print(BigNum2)
+        print("Lista =", A)
+        print("O maior número da lista acima é =", BigNum2)    
     else:
         print("Lista =", A)
         print("O maior número da lista acima é =", BigNum1)    
