@@ -3,34 +3,38 @@
 A = [8, 3, 2, 9, 7, 1, 5, 4];
 A1 = [];
 A2 = [];
-i = 0;
+i = 1;
 tam = len(A);
-div = tam/2;
+div = int(tam/2);
 j = div;
+k = 1;
 
 def DivideConquer():
     for i in range(div):
-        A1[i] = A[i]
+        A1.append(A[i])
+        
 
     for j in range(tam):
-        A2[j] = A[j]
-
+        A2.append(A[j])
+        
     
-    for i in range(div):    
+    for i in range(div):
+        k = div-1
         if A1[i] < A1[k]:
             BigNum1 = A1[k]
         else:
             if k < div:
-                k = i+1
+                continue
             else:
                 exit
 
-    for j in range(tam):    
+    for j in range(tam):
+        m = tam-1  
         if A2[j] < A2[m]:
             BigNum2 = A1[k]
         else:
             if m < tam:
-                m = j+1
+               continue 
             else:
                 exit
 
@@ -38,7 +42,8 @@ def DivideConquer():
     if BigNum1 < BigNum2:
         print(BigNum2)
     else:
-        print(BigNum1)    
+        print("Lista =", A)
+        print("O maior número da lista acima é =", BigNum1)    
 
 DivideConquer();
 
