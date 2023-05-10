@@ -60,6 +60,7 @@ def DivideConquer():
 DivideConquer();
 
 
+
 # Respostas
 # a) Será qualquer valor do arranjo, pois todos serão o maior valor
 #
@@ -75,17 +76,24 @@ DivideConquer();
 
 
 # Expressão Matemática 
-# 
+# T(n) = aT(n/b) + f(n)
 
 #Cálculo da função de custo
-# 
+# T(n) = 2T(n/2) + T(n)
 
 #Classe de eficiência
-# -> Pior caso =
-# -> Melhor caso = 
-# -> Caso médio =
+# -> Melhor caso = Encontrar na primeira comparação o maior valor -> O (1)
+# -> Pior caso = Todos os valores são menor que 1 -> O (n)
+# -> Caso médio = Não encontrar o maior valor, todos são iguais -> O (log n)
 
 #Teorema mestre
-
-
-    
+# Se
+#   O(n^d), se a < b^d,
+#   O(n^d log n), se a = b^d,
+#   O(n^log b^a), se a > b^d,
+# Então
+#   a = 2
+#   b = 2
+#   d = 1
+# Logo 
+#   O (n log n)
