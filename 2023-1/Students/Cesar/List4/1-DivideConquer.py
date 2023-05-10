@@ -3,7 +3,7 @@
 #######################################################
 
 #Lista com n elementos
-A = [8, 3, 2, 9, 7, 1, 5, 4]; 
+A = [8, 3, 2, 9, 7, 101, 1, 5, 4, 22, 1]; 
 
 #Cria o método Dividir e Conquistar
 def DivideConquer():
@@ -43,20 +43,32 @@ def DivideConquer():
     print("Sublista A1 = ", A1)
     print("Sublista A2 = ", A2)
 
+    #Cria as variáveis para armazenar os maiores valores obtidos de cada sublista
+    BigN1 = max(A1);
+    BigN2 = max(A2);
+
+    #Valida qual dos maiores valores de cada sublista é o maior valor da lista original
+    if BigN1 > BigN2:
+        print("O maior número da lista A =", BigN1)
+    else:
+        print("O maior número da lista A =", BigN2)
+
 #Invoca o método Dividir e Conquistar
 DivideConquer();
 
 
 # Expressão Matemática 
-# -> T (n) = aT (n/b) + f (n)
+# 
 
 #Cálculo da função de custo
-# -> A(n) = 2A(n/2) + 1
-
+# 
 
 #Classe de eficiência
-# -> Pior caso = Todos os valores comparados são iguais, não há número maior = O(n)
-# -> Melhor caso = Encontrar o maior valor comparado nas duas listas simultaneamente = O(1)
-# -> Caso médio = Encontrar o maior valor comparado em uma lista e não em outra lista = O(log n)
+# -> Pior caso =
+# -> Melhor caso = 
+# -> Caso médio =
+
+#Teorema mestre
+
 
     
