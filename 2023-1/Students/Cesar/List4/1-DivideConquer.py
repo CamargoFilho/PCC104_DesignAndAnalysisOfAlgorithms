@@ -2,8 +2,11 @@
 # Divide-and-Conquer of an Array of n elements
 #######################################################
 
-#Lista com n elementos
+#Lista com n elementos, n > 1
 A = [8, 3, 2, 9, 7, 101, 1, 5, 4, 22, 1]; 
+
+#Lista com n elementos, n = n
+#A = [8, 8, 8, 8, 8, 8]; 
 
 #Cria o método Dividir e Conquistar
 def DivideConquer():
@@ -55,6 +58,20 @@ def DivideConquer():
 
 #Invoca o método Dividir e Conquistar
 DivideConquer();
+
+
+# Respostas
+# a) Será qualquer valor do arranjo, pois todos serão o maior valor
+#
+# b) T(n) = aT(n/b) + f (n)
+#   onde "a" = Constantes conta a recorrência da função base
+#   onde "b" = Constante que será divido o arranjo 
+#   onde "n" > 1
+#   onde "f(n)" = uma função que contabiliza o tempo gasto na divisão de uma instância
+#
+# c) Nem todo algoritmo de dividir para conquistar é necessariamente mais eficiente
+#    do que mesmo uma solução de força bruta, mas na maioria dos casos comparado com outros algoritmos
+#    ele possuem um tempo de execução relativamente menor. (Levitin, 2012)
 
 
 # Expressão Matemática 
