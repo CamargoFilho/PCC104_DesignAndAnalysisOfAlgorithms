@@ -35,32 +35,35 @@ def QuickSort():
 
     #Mede o tamanho da lista inicial
     tam = len(A);
-    itam = tam-1
 
-    #Imprime a lista inicial não ordenada
-    print("Lista A (Não ordenada)",A); 
-
-    #Ordena a lista inicial
-    A.sort();
-
-    #Imprime a lista inicial ordenada
-    print("Lista A (Ordenada)", A); 
-
-       
-    #Cria o contador do laço para dividir a lista em n partes
-    i = 0;
-    j = -1;
-    k = 0;
-
-    #Executa a divisão da lista inicial em n sublistas
-    for i in range(tam):
-        print("Sublista A",i+1,"=", A[i]);
-
-    #Busca o maior valor entre as n listas
-    if A[itam] > A[i]:
-        print("O maior valor entre as listas é", A[itam]);
+    #Calcula o resto da divisão por do total da lista por 2
+    mod = tam % 2
+    
+    #Define o pivot inicial da lista (primeiro elemento da lista)
+    if mod != 0: 
+        #Se o resto da divisão for diferente de zero, dividir uma das listas em qtd. de valores ímpar
+        pivot = int(tam/2)+mod;
     else:
-        print("O maior valor entre as listas é igual para todos",A[i]);
+        #Se o resto da divisão for igual a zero, dividir amba as listas em qtd. de valores par
+        pivot = int(tam/2);
+
+    indexList = [];
+    i = 0;
+    for i in range(tam):
+        indexList.append(i)
+
+    l = tam-1
+    r = 0
+
+    #Imprime a lista inicial não ordenada e o pivot inicial
+    print("Lista A (Não ordenada) ->",A);
+    print("Indices da lista ->",indexList);
+    print("Pivot [INICIO] (s) ->",pivot);
+    print("Primeiro valor a esquerda [INICIO] (l) ->",r);
+    print("último valor a direita [INICIO] (r) ->",l);
+
+    #
+
 
 
 #Invoca o método Dividir e Conquistar
