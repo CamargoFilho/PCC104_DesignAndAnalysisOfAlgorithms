@@ -70,19 +70,7 @@ def QuickSort():
     j = r+1;
 
     #Executa o QuickSort
-    for i in range(tam):
-        while A[i] > A[l]:
-            i = i+1
-            print("A[i],A[j] ->",A[i],A[j])
-            A[i],A[j] = A[j],A[i]
-            print("Swap : A[i]],A[j] ->",A[i],A[j])          
-
-        while A[j] < A[r]:
-            j = j-1
-
-    while i < j:
-        A[i],A[j] = A[j],A[i]
-        print("Return J -> ",j)
+    
 
 
 #Invoca o método Dividir e Conquistar
