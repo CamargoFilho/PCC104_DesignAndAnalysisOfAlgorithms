@@ -67,29 +67,19 @@ MergeSort();
 
 
 # Respostas
-# a) Será qualquer valor do arranjo, pois todos serão o maior valor
-#
-# b) T(n) = aT(n/b) + f (n)
-#   onde "a" = Constantes conta a recorrência da função base
-#   onde "b" = Constante que será divido o arranjo 
-#   onde "n" > 1
-#   onde "f(n)" = uma função que contabiliza o tempo gasto na divisão de uma instância
-#
-# c) Nem todo algoritmo de dividir para conquistar é necessariamente mais eficiente
-#    do que mesmo uma solução de força bruta, mas na maioria dos casos comparado com outros algoritmos
-#    ele possuem um tempo de execução relativamente menor. (Levitin, 2012)
-
+#   O Mergesort, comparado com os algoritmos quicksort e heapsort não é estável, 
+#   pois a quantidade linear de armazenamento extra que o algoritmo requer o torna instável
 
 # Expressão Matemática 
 # T(n) = aT(n/b) + f(n)
 
 #Cálculo da função de custo
-# T(n) = 2T(n/2) + T(n)
+# C(n) = 2C(n/2) + Cmerge(n)
 
 #Classe de eficiência
 # -> Melhor caso = Encontrar na primeira comparação o maior valor -> O (1)
 # -> Pior caso = Todos os valores são menor que 1 -> O (n)
-# -> Caso médio = Não encontrar o maior valor, todos são iguais -> O (log n)
+# -> Caso médio = Não encontrar o maior valor, todos são iguais -> O (n log n)
 
 #Teorema mestre
 # Se
