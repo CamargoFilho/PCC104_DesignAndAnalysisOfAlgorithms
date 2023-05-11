@@ -1,8 +1,10 @@
 ######################################################
 # Divide-and-Conquer of an Array of n elements
 #######################################################
+#
 # MERGE SORT
-# ALGORITHM Merge(B[0..p − 1], C[0..q − 1], A[0..p + q − 1])
+# 
+#ALGORITHM Merge(B[0..p − 1], C[0..q − 1], A[0..p + q − 1])
 # //Merges two sorted arrays into one sorted array
 # //Input: Arrays B[0..p − 1] and C[0..q − 1] both sorted
 # //Output: Sorted array A[0..p + q − 1] of the elements of B and C
@@ -43,12 +45,6 @@ def MergeSort():
 
     #Imprime a lista inicial ordenada
     print("Lista A (Ordenada)", A); 
-
-       
-    #Cria o contador do laço para dividir a lista em n partes
-    i = 0;
-    j = -1;
-    k = 0;
 
     #Executa a divisão da lista inicial em n sublistas
     for i in range(tam):
