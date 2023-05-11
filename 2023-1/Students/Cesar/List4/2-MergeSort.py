@@ -1,63 +1,68 @@
 ######################################################
 # Divide-and-Conquer of an Array of n elements
 #######################################################
-
-#Lista com n elementos, n > 1
-A = [8, 3, 2, 9, 7, 101, 1, 5, 4, 22, 1]; 
-
-#Lista com n elementos, n = n
-#A = [8, 8, 8, 8, 8, 8]; 
-
+# MERGE SORT
+# ALGORITHM Merge(B[0..p − 1], C[0..q − 1], A[0..p + q − 1])
+# //Merges two sorted arrays into one sorted array
+# //Input: Arrays B[0..p − 1] and C[0..q − 1] both sorted
+# //Output: Sorted array A[0..p + q − 1] of the elements of B and C
+#   i ← 0; 
+#   j ← 0; 
+#   k ← 0
+#   
+#   while i < p and j < q do
+#       if B[i] ≤ C[j]
+#           A[k]← B[i]; 
+#           i ← i + 1
+#       else 
+#           A[k]← C[j]; 
+#           j ← j + 1
+#       k ← k + 1
+#   if i = p
+#       copy C[j..q − 1] to A[k..p + q − 1]
+#   else copy B[i..p − 1] to A[k..p + q − 1]
+#######################################################
 #Cria o método Dividir e Conquistar
-def DivideConquer():
+def MergeSort():
 
-    #Imprime a lista inicial
-    print("Lista A",A); 
+    #Lista com n elementos, n > 1
+    A = [8, 3, 2, 9, 7, 101, 1, 5, 4, 22, 1]; 
 
-    #Cria sublista 1 vazia
-    A1 = []; 
+    #Lista com n elementos, n = n
+    #A = [8, 8, 8, 8, 8, 8]; 
 
-    #Cria sublista 2 vazia
-    A2 = []; 
-    
-    #Cria o contador do laço para dividir a lista em 2 sublistas
-    i = 0;
-    
     #Mede o tamanho da lista inicial
     tam = len(A);
+    itam = tam-1
 
-    #Calcula o resto da divisão por do total da lista por 2
-    mod = tam % 2
-    
-    #Compara se uma das sublistas irão ter qtd. de valores em par ou ímpar
-    if mod != 0: 
-        #Se o resto da divisão for diferente de zero, dividir uma das listas em qtd. de valores ímpar
-        div = int(tam/2)+mod;
-    else:
-        #Se o resto da divisão for igual a zero, dividir amba as listas em qtd. de valores par
-        div = int(tam/2);
-    
-    #Executa a divisão da lista inicial em 2 sublistas
+    #Imprime a lista inicial não ordenada
+    print("Lista A (Não ordenada)",A); 
+
+    #Ordena a lista inicial
+    A.sort();
+
+    #Imprime a lista inicial ordenada
+    print("Lista A (Ordenada)", A); 
+
+       
+    #Cria o contador do laço para dividir a lista em n partes
+    i = 0;
+    j = -1;
+    k = 0;
+
+    #Executa a divisão da lista inicial em n sublistas
     for i in range(tam):
-        if i < div:
-            A1.append(A[i])
-        else:
-            A2.append(A[i])
-    print("Sublista A1 = ", A1)
-    print("Sublista A2 = ", A2)
+        print("Sublista A",i+1,"=", A[i]);
 
-    #Cria as variáveis para armazenar os maiores valores obtidos de cada sublista
-    BigN1 = max(A1);
-    BigN2 = max(A2);
-
-    #Valida qual dos maiores valores de cada sublista é o maior valor da lista original
-    if BigN1 > BigN2:
-        print("O maior número da lista A =", BigN1)
+    #Busca o maior valor entre as n listas
+    if A[itam] > A[i]:
+        print("O maior valor entre as listas é", A[itam]);
     else:
-        print("O maior número da lista A =", BigN2)
+        print("O maior valor entre as listas é igual para todos",A[i]);
+
 
 #Invoca o método Dividir e Conquistar
-DivideConquer();
+MergeSort();
 
 
 
