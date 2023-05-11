@@ -33,6 +33,9 @@ def QuickSort():
     #Lista com n elementos, n = n
     #A = [8, 8, 8, 8, 8, 8]; 
 
+    #Ordena a lista inicial
+    A.sort();
+
     #Mede o tamanho da lista inicial
     tam = len(A);
 
@@ -56,14 +59,30 @@ def QuickSort():
     r = 0
 
     #Imprime a lista inicial não ordenada e o pivot inicial
-    print("Lista A (Não ordenada) ->",A);
+    print("Lista A ->",A);
     print("Indices da lista ->",indexList);
     print("Pivot [INICIO] (s) ->",pivot);
     print("Primeiro valor a esquerda [INICIO] (l) ->",r);
     print("último valor a direita [INICIO] (r) ->",l);
 
-    #
 
+    i = l;
+    j = r+1;
+
+    #Executa o QuickSort
+    for i in range(tam):
+        while A[i] > A[l]:
+            i = i+1
+            print("A[i],A[j] ->",A[i],A[j])
+            A[i],A[j] = A[j],A[i]
+            print("Swap : A[i]],A[j] ->",A[i],A[j])          
+
+        while A[j] < A[r]:
+            j = j-1
+
+    while i < j:
+        A[i],A[j] = A[j],A[i]
+        print("Return J -> ",j)
 
 
 #Invoca o método Dividir e Conquistar
